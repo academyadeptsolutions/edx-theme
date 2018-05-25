@@ -1,165 +1,361 @@
 $sans-serif: 'Helvetica';
-
 $header-bg: #3498db;
-
 $blue: rgb(94, 0, 0);
-
-
-
+$orange: #D6601C;
+$darkbule: #131333;
 .header-global {
-
     height: 90px;
-
     border-bottom: none;
 
-
-
     .wrapper-header {
-
         padding-top: 25px;
-
         padding-bottom: 25px;
-
     }
-
 }
 
-
-
-.home > header {
-
-    background-color: #5e0000;
-
+.home > header,.course-info header.course-profile {
+    background-image: url('http://www.adept.co.zw/wp-content/uploads/2017/11/adept-sales-team.png');
+    background-position: center;
 }
 
-
+a, a:visited, .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link {
+    color: #d6601c;
+    font: inherit;
+    text-decoration: none;
+    transition: all 0.1s linear 0s;
+    &:hover{
+        color: rgb(121, 48, 0);
+    }
+}
 
 .courses-container .courses .course {
-
-    border-bottom-color: #5e0000;
-
+    border-bottom-color: #D6601C;
 }
-
-
 
 .courses-container .courses .course .course-image .cover-image .learn-more {
-
-    background-color: #193050
+    background-color: #D6601C;
+    border-color: #D6601C;
 
 }
 
+.courses-container .courses .course .course-info .course-title {
+    line-height: 23.68px;
+    margin: 5px 0 35px 0;
+    padding: 0 15px;
+    height: 72px;
+    color: #D6601C;
+}
 
+.header-global {
+    border-bottom: 1px solid #919191;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+    background: #131333;
+}
 
-.highlighted-courses .courses .course, 
+.header-global .user .dropdown-menu {
+    background: #131333;
+}
+.header-global .user .dropdown-menu::before {
+    background: #b50f0f00;
+    border-top: 6px solid #131333;
+    border-right: 6px solid #131333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    box-shadow: 1px 0 0 0 #131333, 0 -1px 0 0 #131333;
+    content: "";
+    display: block;
+    height: 0px;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: 7px;
+    top: -5px;
+    width: 0px;
+}
+.header-global .primary>a:hover, .header-global .primary>a:focus, .header-global .primary>a:active {
+    background: transparent;
+}
+.header-global .nav-global li a,.label-username, .header-global .nav-global div a,.doc-link,.header-global .user .dropdown-menu li>a {
+    display: block;
+    padding: 5px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 600;
+    &:hover,&:active,&:focus{
+      color: #D6601C !important;
+    }
+}
 
+.highlighted-courses .courses .course,
 .find-courses .courses .course {
-
-    border-color: #a9bbd3
-
+    border-color: #131333;
+    border-bottom: 3px solid #131333;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
+.highlighted-courses .courses .course:hover,
+.find-courses .courses .course:hover {
+    border-color: #050513;
+    border-bottom: 3px solid #050513;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
-
-.header-global .nav-courseware li .btn, 
-
-.header-global .nav-courseware div .btn, 
-
-.login .form-actions button[type='submit'], 
-
-.register .form-actions button[type='submit']:hover, 
-
-.passwordreset .form-actions button[type='submit']:hover, 
-
-#forgot-password-modal #password-reset .form-actions button[type='submit']:hover, 
-
-.view-survey .action-primary:hover, 
-
-.header-global .nav-courseware li .btn:active, 
-
-.header-global .nav-courseware div .btn:active, 
-
-.login .form-actions button[type='submit']:active, 
-
-.register .form-actions button[type='submit']:active, 
-
-.passwordreset .form-actions button[type='submit']:active, 
-
-#forgot-password-modal #password-reset .form-actions button[type='submit']:active, 
-
-.view-survey .action-primary:active, 
-
-.header-global .nav-courseware li .btn:focus, 
-
-.header-global .nav-courseware div .btn:focus, 
-
-.login .form-actions button[type='submit']:focus, 
-
-.register .form-actions button[type='submit']:focus, 
-
-.passwordreset .form-actions button[type='submit']:focus, 
-
-#forgot-password-modal #password-reset .form-actions button[type='submit']:focus, 
-
+.header-global .nav-courseware li .btn,
+.header-global .nav-courseware div .btn,
+.login .form-actions button[type='submit'],
+.register .form-actions button[type='submit']:hover,
+.passwordreset .form-actions button[type='submit']:hover,
+#forgot-password-modal #password-reset .form-actions button[type='submit']:hover,
+.view-survey .action-primary:hover,
+.header-global .nav-courseware li .btn:active,
+.header-global .nav-courseware div .btn:active,
+.login .form-actions button[type='submit']:active,
+.register .form-actions button[type='submit']:active,
+.passwordreset .form-actions button[type='submit']:active,
+#forgot-password-modal #password-reset .form-actions button[type='submit']:active,
+.view-survey .action-primary:active,
+.header-global .nav-courseware li .btn:focus,
+.header-global .nav-courseware div .btn:focus,
+.login .form-actions button[type='submit']:focus,
+.register .form-actions button[type='submit']:focus,
+.passwordreset .form-actions button[type='submit']:focus,
+#forgot-password-modal #password-reset .form-actions button[type='submit']:focus,
 .view-survey .action-primary:focus,
-
-.header-global .nav-courseware li .btn, 
-
-.header-global .nav-courseware div .btn, 
-
-.login .form-actions button[type="submit"], 
-
-.register .form-actions button[type="submit"], 
-
-.passwordreset .form-actions button[type="submit"], 
-
-#forgot-password-modal #password-reset .form-actions button[type="submit"], 
-
-.view-survey .action-primary {
-
-    background-color: #193050
-
+.header-global .nav-courseware li .btn,
+.header-global .nav-courseware div .btn,
+.login .form-actions button[type="submit"],
+.register .form-actions button[type="submit"],
+.passwordreset .form-actions button[type="submit"],
+#forgot-password-modal #password-reset .form-actions button[type="submit"],
+.view-survey .action-primary,
+.js-register .register-button,
+header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    background-color: #D6601C !important;
+    color: #fff !important;
+    box-shadow: 0px 2px 1px 0px rgb(121, 48, 0) !important;
+    &:hover,&:focus{
+        background-color: rgb(121, 48, 0) !important;
+        box-shadow: 0px 2px 1px 0px rgb(121, 48, 0) !important;
+    }
 }
 
+.btn-blue, .dashboard-banner .wrapper-msg .msg.has-actions .donate-actions .action-donate, .login-register .action-primary, .financial-assistance-wrapper .financial-assistance-form .action-primary, .verification-process .action-primary-blue, .verification-process .carousel .wrapper-task .controls .control .action, .verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a, .verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a, .verification-process.step-select-track .register-choice-audit .action-select input, .verification-process.step-confirmation .course-info .options .action-course, .verification-process.step-confirmation .course-info .course-actions .action-dashboard, .reverify-blocked .action-primary, .wrapper-authorize .btn-authorization-allow, .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn {
+    background-color: #D6601C;
+    box-shadow: 0px 2px 1px 0px rgb(121, 48, 0);
+    &:hover,&:focus{
+        background-color: rgb(121, 48, 0);
+        box-shadow: 0px 2px 1px 0px rgb(121, 48, 0);
+    }
+}
 
+.help-buttons button, .login aside .btn-login .btn-login-action, .register aside .btn-login .btn-login-action, .passwordreset aside .btn-login .btn-login-action, #forgot-password-modal #password-reset aside .btn-login .btn-login-action, .login-register .login-provider, .financial-assistance-wrapper .financial-assistance-form .login-provider, .login .form-actions.form-third-party-auth button[type="submit"], .register .form-actions.form-third-party-auth button[type="submit"], .passwordreset .form-actions.form-third-party-auth button[type="submit"], #forgot-password-modal #password-reset .form-actions.form-third-party-auth button[type="submit"], .login-register .nav-btn, .financial-assistance-wrapper .financial-assistance-form .nav-btn, .login-register .button-secondary-login, .financial-assistance-wrapper .financial-assistance-form .button-secondary-login, .wrapper-authorize .btn-authorization-cancel {
+    box-shadow: none;
+    border: 1px solid #D6601C;
+    padding: 10px 20px;
+    background: transparent;
+    color: #D6601C;
+    &:hover,&:focus{
+        background-color: #D6601C;
+        box-shadow: 0px 2px 1px 0px #D6601C;
+    }
+}
 
 .wrapper-footer {
 
-    
-
     box-shadow: 0 -1px 5px 0 rgba(94,0,0,0.1);
+    border-top: 1px solid #131333;
+    background-color: #131333;
 
-    border-top: 1px solid #3498db;
-
-
-
-    footer#footer-openedx .colophon 
-
+    footer#footer-openedx .colophon
     {
-
-
-
-        .wrapper-logo {
-
-            margin-right: 20px;
-
+        width: 100%;
+        .copyright{
+            color: white !important;
         }
-
-
+        .wrapper-logo {
+            margin-right: 20px;
+        }
 
         .nav-colophon {
-
             margin: 30px 0 2px 0;
-
         }
-
-    
 
         .wrapper-logo, .nav-colophon, p.copyright, nav.nav-legal {
-
             float:left
-
         }
-
     }
 
+    footer#footer-openedx a {
+        transition: link-color 0.15s ease-in-out 0s,border 0.15s ease-in-out 0s;
+        border-bottom: none;
+        color: #D6601C;
+        text-decoration: none !important;
+    }
+}
+
+input[type="submit"], input[type="button"], button, .button {
+    border-radius: 3px;
+    border: 1px solid #af490f;
+    border-bottom: 1px solid #a44813;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 0 #D6601C;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: #D6601C !important;
+    background-image: linear-gradient(to bottom,#D6601C 0%,#f37228 50%,#f86815 50%,#D6601C 100%) !important;
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #8f3705;
+    font: normal 1.2rem/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    &:hover,&:focus,&:active{
+        background-color: rgb(121, 48, 0) !important;
+        box-shadow: 0px 2px 1px 0px rgb(121, 48, 0) !important;
+    }
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .button:hover {
+    border-radius: 3px;
+    border: 1px solid #af490f;
+    border-bottom: 1px solid #a44813;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 0 #D6601C;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: #D6601C;
+    background-image: linear-gradient(to bottom,#D6601C 0%,#f37228 50%,#f86815 50%,#D6601C 100%);
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #8f3705;
+    font: normal 1.2rem/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+input[type="submit"]:hover, input[type="button"]:active, button:active, .button:active {
+    border-radius: 3px;
+    border: 1px solid #af490f;
+    border-bottom: 1px solid #a44813;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 0 #a44813;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: #a44813;
+    background-image: linear-gradient(to bottom,#a44813 0%,#a44813 50%,#a44813 50%,#a44813 100%);
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #8f3705;
+    font: normal 1.2rem/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+.empty-dashboard-message a {
+    background-color: #d6601c;
+    border: 1px solid #d6601c;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    color: #fff !important;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 15px 20px;
+    &:hover,&:active,&:focus{
+        background-color: #772f05;
+        border: 1px solid #772f05;
+        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.sysadmin-dashboard-content h2 a {
+    margin-right: 1.2em;
+    color: #d6601c;
+    &:hover,&:focus,&:active{
+        color: #772f05;
+    }
+}
+
+p a, p a:visited,p a:focus,p a:hover {
+    color: #d6601c;
+    font: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    transition: all 0.1s linear 0s;
+}
+
+.header-global h1.logo a img{
+        height: 60px;
+}
+
+.wrapper-footer footer#footer-openedx .wrapper-logo a img{
+        height: 60px;
+}
+.copyright,.nav-legal{
+        margin-top: 35px !important;
+}
+.login-register .nav-btn,form button,.login-register .form-field .field-link{
+        color: #fff !important;
+}
+
+
+footer {
+    background-color: #131333 !important;
+    color: #fff !important;
+}
+footer h4,footer li a,footer a{
+    color: #fff !important;
+}
+footer #footer {
+    padding-top: 32px;
+    padding-bottom: 0px;
+}
+.text-muted{
+    padding-top: 10px;
+    font-size: 12px !important;
+    width: 100%;
+    text-align: center;
+}
+.wrapper-footer {
+    padding: 25px 10px 10px 10px;
+}
+row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+footer .row{
+    display: flex;
+}
+footer .col-md-4{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+footer{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+}
+
+footer .col-md-4 h2{
+    text-align: center;
+    font-size: 30px;
 }
