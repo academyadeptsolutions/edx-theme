@@ -1,171 +1,111 @@
 ## mako
-
 <%page expression_filter="h"/>
-
 <%!
-
   from django.core.urlresolvers import reverse
-
   from django.utils.translation import ugettext as _
-
   from branding.api import get_footer
-
 %>
-
 <% footer = get_footer(is_secure=is_secure) %>
-
 <%namespace name='static' file='static_content.html'/>
-
-
-
+<style>
+.gris{
+color:#ccc;
+}
+footer{
+background-color:#0a2d74;
+}
+h5{color:white;}
+.c-caption{font-size:20px
+@media (max-width: 1300px and min-width: 990px){
+.face{
+width:30%;
+}}
+</style>
 <div class="wrapper wrapper-footer">
-
-  <footer id="footer-openedx" class="grid-container"
-
-    ## When rendering the footer through the branding API,
-
-    ## the direction may not be set on the parent element,
-
-    ## so we set it here.
-
-    % if bidi:
-
-      dir=${bidi}
-
-    % endif
-
-  >
-
-    <div class="colophon">
-
-
-
-      <div class="wrapper-logo">
-
-        <p>
-
-          <a href="/">
-
-            ## The default logo is a placeholder.
-
-            ## You can either replace this link entirely or update
-
-            ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-
-            ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-
-            ## can be included in the footer on other sites
-
-            ## (e.g. a blog or marketing front-end) to provide a consistent
-
-            ## user experience.  See the branding app for details.
-
-            <img alt="organization logo" src="${footer['logo_image']}">
-
-          </a>
-
-        </p>
-
-      </div>
-
-	  
-
-      <nav class="nav-colophon" aria-label="${_('About')}">
-
-        <ol>
-
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
-
-            <li class="nav-colophon-0${item_num}">
-
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-
-            </li>
-
-            % endfor
-
-        </ol>
-
-      </nav>
-
-	  
-
-      ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-
-      <p class="copyright">${footer['copyright']}</p>
-
-
-
-      <nav class="nav-legal" aria-label="${_('Legal')}">
-
-        <ul>
-
-          % for item_num, link in enumerate(footer['legal_links'], start=1):
-
-            <li class="nav-legal-0${item_num}">
-
-              <a href="${link['url']}">${link['title']}</a>
-
-            </li>
-
-          % endfor
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-
-
-    ## Please leave this link and use one of the logos provided
-
-    ## The OpenEdX link may be hidden when this view is served
-
-    ## through an API to partner sites (such as marketing sites or blogs),
-
-    ## which are not technically powered by OpenEdX.
-
-    % if not hide_openedx_link:
-
-    <div class="footer-about-openedx">
-
-      <p>
-
-        <a href="${footer['openedx_link']['url']}">
-
-          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-
-        </a>
-
-      </p>
-
-    </div>
-
-    % endif
-
-  </footer>
-
+  <footer>
+    <div id="footer" class="container hidden-print">
+	    <div class="row">	
+<div class="col-md-3 col-sm-12 col-xs-12">
+<div class="c-caption" style="color:white; margin-bottom:5%;">CONTACT US</div>
+<div class="gris">
+7 Phillips Avenue</br>
+Belgravia</br>
+Harare, Zimbabwe</br>
++263 4 252 675 / +263 4 796 425</br>
+sales@adept.co.zw
+</div>
 </div>
 
+<div class="col-md-3 col-sm-12 col-xs-12">
+<div class="c-caption" style="color:white; margin-bottom:5%;"">LATEST NEWS</div>
+<div class="bloc" style="margin-bottom:#ccc solid 1px;">
+<div style="color:white;">Study Together For Much Less </div>
+<div style="color:#ccc; border-bottom: 1px solid gray; margin-bottom:3%; margin-top3%;">February 7, 2018</div>
+</div>
+<div class="bloc" style="margin-bottom:#ccc solid">
+<div style="color:white;">Reporting from #MicrosoftInspire </div>
+<div style="color:#ccc;  border-bottom: 1px solid gray; margin-bottom:3%; margin-top3%;">July 18, 2017</div>
+</div>
+<div class="bloc" style="margin-bottom:#ccc solid">
+<div style="color:white;">Creating Memories With Future 
+Generations</div> <div style="color:#ccc;  border-bottom: 1px solid gray; margin-bottom:3%; margin-top3%;">June 29, 2017 </div>
+</div>
+<div class="bloc" style="margin-bottom:15%;">
+<div style="color:white;">Check Out Our Upcoming Course!</div>
+<div style="color:#ccc;" style="margin-bottom%;">June 15, 2017 </div>
+</div>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<div class="c-caption" style="color:white; margin-bottom:5%;"">BUSINESS HOURS</div>
+<div class="gris">
+Monday-Friday: 8am to 5pm
+Saturday: 8am to 2pm
+Sunday: Closed
+</div>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12 ">
+<div class="face">
+          <aside id="text-3"><div class="c-caption" style="color:white; margin-bottom:5%;"">LET’S GET TALKING!</div>	
+<div class="cff-likebox cff-outside cff-top"><script src="https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=712681982206086">
+</script><div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/adeptsolutionsZW" data-width="300" data-hide-cover="false" data-show-facepile="false" data-small-header="false" data-hide-cta="false" data-show-posts="false" data-adapt-container-width="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=712681982206086&amp;container_width=190&amp;hide_cover=false&amp;hide_cta=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FadeptsolutionsZW&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;small_header=false&amp;width=300">
+<span style="vertical-align: bottom; width: 190px; height: 130px;"><iframe name="f2e46d8557c3aa" width="300px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/plugins/page.php?adapt_container_width=true&amp;app_id=712681982206086&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df59970d334ffe%26domain%3Dwww.adept.co.zw%26origin%3Dhttp%253A%252F%252Fwww.adept.co.zw%252Ff2e5383153cba9%26relation%3Dparent.parent&amp;container_width=190&amp;hide_cover=false&amp;hide_cta=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FadeptsolutionsZW&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;small_header=false&amp;width=300" style="border: none; visibility: visible; width: 190px; height: 130px;" class=""></iframe></span></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f5416afe32de58" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/connect/ping?client_id=712681982206086&amp;domain=www.adept.co.zw&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df2e34159648c654%26domain%3Dwww.adept.co.zw%26origin%3Dhttp%253A%252F%252Fwww.adept.co.zw%252Ff2e5383153cba9%26relation%3Dparent&amp;response_type=token%2Csigned_request%2Ccode&amp;sdk=joey&amp;version" style="display: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/RQ7NiRXMcYA.js?version=42#channel=f2e5383153cba9&amp;origin=http%3A%2F%2Fwww.adept.co.zw" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/RQ7NiRXMcYA.js?version=42#channel=f2e5383153cba9&amp;origin=http%3A%2F%2Fwww.adept.co.zw" style="border: none;"></iframe></div></div></div></div>
+		  </div>
+		</aside>        </div>
+		</div>
+</div>
+</div>
+<div class="container-fluid" style="background-color:#6dac00; color:white;">
+      <div class="row">
+        <div class="col-md-3">
+         
+        </div>
+		<div class="col-md-4">
+          <div>
+                        ©  Copyright - Adept Solutions          </div>
+        </div>
+		<div class="col-md-1">
+
+        </div>
+        <div class="col-md-4">
+          <div class="menu-footer-container"><ul id="menu-footer" class="c-menu nav">
+		  <li id="menu-item-8284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8284"  style="color:white;">
+		  <a href="http://www.adept.co.zw/contact/" style="color:white;">Contact</a></li></ul></div>        </div>
+      </div>
+
+                  </div>
+          </div>
+  </footer>
+
+
+</div>
 % if include_dependencies:
-
   <%static:js group='base_vendor'/>
-
   <%static:css group='style-vendor'/>
-
   <%include file="widgets/segment-io.html" />
-
   <%include file="widgets/segment-io-footer.html" />
-
 % endif
-
 % if footer_css_urls:
-
   % for url in footer_css_urls:
-
     <link rel="stylesheet" type="text/css" href="${url}"></link>
-
   % endfor
-
 % endif
