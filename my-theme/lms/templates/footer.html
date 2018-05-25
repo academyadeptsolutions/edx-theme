@@ -17,11 +17,43 @@
 <%namespace name='static' file='static_content.html'/>
   <div class="wrapper wrapper-footer" style="padding:0;">
  <footer style="padding:0;">
+  <style type="text/css">
+    @media only screen and (max-width: 980px) {
+        .break-small{
+          float: none !important;
+
+        }
+        .green-footer{
+          height: 30px  !important;
+        }
+        .container{
+          padding: 0 10px  !important;
+          min-width: 200px;
+        }
+        .row{
+          flex-direction: column;
+        }
+
+        .face{
+          float: none !important;
+          text-align: left !important;
+        }
+        .c-caption,.gris{
+          text-align: left !important;
+          float: none !important;
+        }
+        .col-md-4{
+          margin: 10px 0;
+        }
+
+    }
+
+  </style>
 <div class="container">
 <div class="row"> 
-<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="break-small col-md-4 col-sm-12 col-xs-12">
 
-<div class="c-caption" style="color:white; margin-bottom:5%;">CONTACT US</div>
+<div class="c-caption" style="color:white; margin-bottom:5%;font-weight: bold">CONTACT US</div>
 
 <div class="gris">
 
@@ -43,7 +75,7 @@ sales@adept.co.zw
 
         <div class="col-md-4 col-sm-12 col-xs-12" style="text-align:center">
 
-          <div class="c-caption" style="color:white; margin-bottom:5%; text-align:center" >BUSINESS HOURS</div>
+          <div class="c-caption" style="color:white; margin-bottom:5%; text-align:center;font-weight: bold" >BUSINESS HOURS</div>
 
 <div class="gris">
 
@@ -57,11 +89,11 @@ Sunday: Closed
 
         </div>
 
-    <div class="col-md-4 col-sm-12 col-xs-12">
+    <div class="break-small col-md-4 col-sm-12 col-xs-12">
 
           <div class="face" style="color:white; float:right;">
 
-          <aside id="text-3"><div class="c-caption" style="color:white; margin-bottom:5%; float:right;">LET’S GET TALKING!</div>  
+          <aside id="text-3"><div class="c-caption" style="color:white; margin-bottom:5%; float:right;font-weight: bold">LET’S GET TALKING!</div>  
 
 <div class="cff-likebox cff-outside cff-top"><script src="https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=712681982206086">
 
@@ -79,13 +111,13 @@ Sunday: Closed
 
 
 </div>
-  <div style="margin:0px;background-color:#6dac00; color:white; height:40px; line-height:40px;">
-<div class="container" style="height:40px; line-height:20px;">
-    <span>
+<div class="green-footer" style="margin:0px;background-color:#6dac00; color:white; height:30px; line-height:30px;">
+<div class="container" style="padding: 0;">
+    <span class="break-small">
         ©  Copyright - Adept Solutions      
     </span>
-    <span style="float:right;">  
-        <a href="http://www.adept.co.zw/contact/" style="color:white;">Contact</a>   
+    <span style="float:right;" class="break-small">  
+        <a href="http://www.adept.co.zw/contact/" style="color:white;margin-right: 20px">Contact</a>   
     </span>
 </div>
 </div>
