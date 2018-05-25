@@ -1,8 +1,9 @@
+
 $sans-serif: 'Helvetica';
 $header-bg: #3498db;
 $blue: rgb(94, 0, 0);
 $orange: #6dac00;
-$darkbule: #131333;
+$darkbule: #214283;
 .header-global {
     height: 90px;
     border-bottom: none;
@@ -24,7 +25,7 @@ a, a:visited, .login-register .form-field .field-link, .financial-assistance-wra
     text-decoration: none;
     transition: all 0.1s linear 0s;
     &:hover{
-        color: rgb(5,131,72);
+        color: rgba(87, 130, 13, 0.9);
     }
 }
 
@@ -49,19 +50,19 @@ a, a:visited, .login-register .form-field .field-link, .financial-assistance-wra
 .header-global {
     border-bottom: 1px solid #919191;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
-    background: #131333;
+    background: #214283;
 }
 
 .header-global .user .dropdown-menu {
-    background: #131333;
+    background: #214283;
 }
 .header-global .user .dropdown-menu::before {
     background: #b50f0f00;
-    border-top: 6px solid #131333;
-    border-right: 6px solid #131333;
+    border-top: 6px solid #214283;
+    border-right: 6px solid #214283;
     border-bottom: 6px solid transparent;
     border-left: 6px solid transparent;
-    box-shadow: 1px 0 0 0 #131333, 0 -1px 0 0 #131333;
+    box-shadow: 1px 0 0 0 #214283, 0 -1px 0 0 #214283;
     content: "";
     display: block;
     height: 0px;
@@ -86,8 +87,8 @@ a, a:visited, .login-register .form-field .field-link, .financial-assistance-wra
 
 .highlighted-courses .courses .course,
 .find-courses .courses .course {
-    border-color: #131333;
-    border-bottom: 3px solid #131333;
+    border-color: #214283;
+    border-bottom: 3px solid #214283;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -132,19 +133,19 @@ a, a:visited, .login-register .form-field .field-link, .financial-assistance-wra
 header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background-color: #6dac00 !important;
     color: #fff !important;
-    box-shadow: 0px 2px 1px 0px rgb(5,131,72) !important;
+    box-shadow: 0px 2px 1px 0px rgba(87, 130, 13, 0.9) !important;
     &:hover,&:focus{
-        background-color: rgb(5,131,72) !important;
-        box-shadow: 0px 2px 1px 0px rgb(5,131,72) !important;
+        background-color: rgba(87, 130, 13, 0.9) !important;
+        box-shadow: 0px 2px 1px 0px rgba(87, 130, 13, 0.9) !important;
     }
 }
 
 .btn-blue, .dashboard-banner .wrapper-msg .msg.has-actions .donate-actions .action-donate, .login-register .action-primary, .financial-assistance-wrapper .financial-assistance-form .action-primary, .verification-process .action-primary-blue, .verification-process .carousel .wrapper-task .controls .control .action, .verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a, .verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a, .verification-process.step-select-track .register-choice-audit .action-select input, .verification-process.step-confirmation .course-info .options .action-course, .verification-process.step-confirmation .course-info .course-actions .action-dashboard, .reverify-blocked .action-primary, .wrapper-authorize .btn-authorization-allow, .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn {
     background-color: #6dac00;
-    box-shadow: 0px 2px 1px 0px rgb(5,131,72);
+    box-shadow: 0px 2px 1px 0px rgba(87, 130, 13, 0.9);
     &:hover,&:focus{
-        background-color: rgb(5,131,72);
-        box-shadow: 0px 2px 1px 0px rgb(5,131,72);
+        background-color: rgba(87, 130, 13, 0.9);
+        box-shadow: 0px 2px 1px 0px rgba(87, 130, 13, 0.9);
     }
 }
 
@@ -163,8 +164,8 @@ header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
 .wrapper-footer {
 
     box-shadow: 0 -1px 5px 0 rgba(94,0,0,0.1);
-    border-top: 1px solid #131333;
-    background-color: #131333;
+    border-top: 1px solid #214283;
+    background-color: #214283;
 
     footer#footer-openedx .colophon
     {
@@ -216,8 +217,8 @@ input[type="submit"], input[type="button"], button, .button {
     vertical-align: top;
     -webkit-font-smoothing: antialiased;
     &:hover,&:focus,&:active{
-        background-color: rgb(5,131,72) !important;
-        box-shadow: 0px 2px 1px 0px rgb(5,131,72) !important;
+        background-color: rgba(87, 130, 13, 0.9) !important;
+        box-shadow: 0px 2px 1px 0px rgba(87, 130, 13, 0.9) !important;
     }
 }
 
@@ -319,7 +320,7 @@ p a, p a:visited,p a:focus,p a:hover {
 
 
 footer {
-    background-color: #131333 !important;
+    background-color: #214283 !important;
     color: #fff !important;
 }
 footer h4,footer li a,footer a{
